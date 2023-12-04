@@ -7,7 +7,7 @@ $games = $data | ForEach-Object {
         $bag = @{}
         $_ -split ", " | ForEach-Object {
             $count, $color = $_ -split " "
-            $bag[$color] = [Int32]$count
+            $bag[$color] = [Int]$count
         }
         $bag
     }
