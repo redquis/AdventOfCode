@@ -14,7 +14,7 @@ $schematic = Get-Content "./Day3Input.txt"
 
 function Part1($Schematic) {
 
-    $symbols = $Schematic | ? type -eq symbol
+    $symbols = $Schematic | Where-Object type -eq symbol
     
     $Schematic 
     | Where-Object type -eq number 
