@@ -37,7 +37,7 @@ function Part2($Schematic) {
                     |Where-Object { $symbol.row -in $_.rows -and $symbol.column -in $_.columns }
                 )
         if($gears.Count -eq 2){
-            $gears[0].value * $cogs[1].value
+            $gears[0].value * $gears[1].value
         }
     })
     | Measure-Object -Sum 
